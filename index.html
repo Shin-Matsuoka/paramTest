@@ -8,7 +8,8 @@
     <p>2</p>
     <p>May the force be with you.</p>
     <script>
-      var a= document.cookie;
+      var a= location.href.split("?")[1];
+      document.write("<div>"+a+"</div>");
       document.write("<p>Anakin Skywalker</p>");
     </script>
   </body>

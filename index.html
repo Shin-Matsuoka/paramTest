@@ -8,7 +8,15 @@
     <p>2</p>
     <p>May the force be with you.</p>
     <script>
-      var a= location.href.split("?")[1];
+      let a= location.href.split("?")[1];
+      let b = {};
+      a.forEach(function(v) {
+        c = v.split("=");
+        b[c[0]] = c[1];
+      })
+      Object.keys(b).forEach(function(v)  {
+        document.write("<div>"+v+" = "+b[v]+"</div>");
+      })
       document.write("<div>"+a+"</div>");
       document.write("<p>Anakin Skywalker</p>");
     </script>
